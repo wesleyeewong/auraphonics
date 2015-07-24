@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+	font-family: 'Play', sans-serif;
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+p{margin:0;}
+
+body {
+	height:100%;
+}
+
+/*W-squared*/
+.w2-third {width:32.5%;}
+.w2-tab-margin {margin-top:14px;margin-bottom:14px;}
+.w2-tab-center {margin:0 auto;}
+
+/*Jumbo stuff*/#b3d4fc
+.jumbo-font-1 {font-size: 1em;}
+.jumbo-font-2 {font-size: 2em;}
+.jumbo-font-3 {font-size: 3em;}
+.jumbo-font-4 {font-size: 4em;}
+.jumbo-font-5 {font-size: 5em;}
+
+.waterfall-header-nav .mdl-navigation__link:last-of-type  {padding-right: 0;}
+
+
+i.tiny {font-size: 1em;}
+i.small {font-size: 2em;}
+i.medium {font-size: 3em;}
+i.large {font-size: 6em; color: red;}
+
+.styled-select{width:300px;font-size:16px;color:inherit;background-color:rgba(0,0,0,0);margin-top:20px;margin-bottom:20px;}
