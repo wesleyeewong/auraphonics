@@ -3,18 +3,22 @@
 <head>
   <title><%= yield :title %></title>
 
+
+  <%= javascript_include_tag 'application', 'data-no-turbolinks' => true %>
+  <%= stylesheet_link_tag  '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-no-turbolinks' => true %>
+  <%= javascript_include_tag  '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js' %>
+  <%= csrf_meta_tags %>
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.light_blue-green.min.css" /> 
-  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag  '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag  '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js' %>
-  <%= csrf_meta_tags %>
+  
+
+  
 </head>
 <body>
 
@@ -40,7 +44,7 @@
   <div class="mdl-layout__drawer">
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="">Submit</a>
-      <a class="mdl-navigation__link" href="">Contact</a>
+      <a class="mdl-navigation__link" href="/contact">Contact</a>
       <a class="mdl-navigation__link" href="">Donate</a>
     </nav>
   </div>

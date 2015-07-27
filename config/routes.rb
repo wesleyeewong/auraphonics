@@ -17,7 +17,8 @@ Rails.application.routes.draw do
 
   get '/submit' => 'submit#show'
 
-  get '/contact' => 'submit#show'
+  get '/contact' => 'contact#show'
+  post '/sent' => 'contact#sent'
 
   get '/donate' => 'donate#show'
 

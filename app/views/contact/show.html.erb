@@ -1,2 +1,19 @@
-<h1>Contact#show</h1>
-<p>Find me in app/views/contact/show.html.erb</p>
+<% provide(:title, 'Contact Us') %>
+
+<%= form_tag("/sent", method: "post") do %>
+
+<%= label_tag(:name, "Name") %>
+<%= text_field_tag(:name) %>
+
+<%= label_tag(:email, "E-mail") %>
+<%= email_field_tag(:email) %>
+
+<%= label_tag(:subject, "Subject") %>
+<%= text_field_tag(:subject) %>
+
+<%= label_tag(:body, "Content") %>
+<%= text_field_tag(:body) %>
+
+<%= submit_tag("Send") %>
+
+<% end %>
