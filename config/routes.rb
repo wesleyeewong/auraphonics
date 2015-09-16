@@ -15,12 +15,30 @@ Rails.application.routes.draw do
   
   get '/mixes' => 'mixes#show'
 
-  get '/submit' => 'submit#show'
+  get '/submit' => 'submit#new'
+  post '/submit/create' => 'submit#create'
+  get '/submit/:id' => 'submit#show'
 
   get '/contact' => 'contact#show'
   post '/sent' => 'contact#sent'
 
   get '/donate' => 'donate#show'
+
+  get '/signup' => 'users#new'
+  post '/user/create' => 'users#create'
+  get '/user/:id' => 'users#show'
+
+  get '/login' => 'sessions#login'
+  post '/login_attempt' => 'sessions#login_attempt'
+  get '/setting' => 'sessions#setting'
+  get '/pending_details/:id' => 'sessions#pending'
+  get '/approved_details/:id' => 'sessions#approved'
+  get '/denied_details/:id' => 'sessions#denied'
+  get '/completed_details/:id' => 'sessions#completed'
+  post '/update' => 'sessions#update'
+
+  get '/home' => 'welcome#index'
+
 
 
   # Example of regular route:

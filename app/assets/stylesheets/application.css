@@ -25,6 +25,11 @@ p{margin:0;}
 
 body {
 	height:100%;
+	background-color:rgb(81, 250, 223);
+}
+
+h1,h2,h3,h4 {
+	font-family: 'Play', sans-serif;
 }
 
 /*W-squared*/

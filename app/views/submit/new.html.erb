@@ -1,0 +1,66 @@
+<div class="mdl-layout__content" style="margin-left:25%;overflow:hidden;">
+	<form accept-charset="UTF-8" action="/submit/create" method="post" style="padding-top:70px;">
+		<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+		<p class="jumbo-font-2">Basic Information</p>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="">
+			<input class="mdl-textfield__input" name="submission[artistname]" type="text" id="nickname"  />
+			<label class="mdl-textfield__label" for="nickname">Artist Name</label>
+		</div> <br>
+
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo" style="">
+			<input class="mdl-textfield__input" name="submission[firstname]" type="text" id="firstname" />
+			<label class="mdl-textfield__label" for="firstname">First Name</label>
+		</div>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="">
+			<input class="mdl-textfield__input" name="submission[lastname]" type="text" id="lastname"  />
+			<label class="mdl-textfield__label" for="lastname">Last Name</label>
+		</div> <br>
+
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="">
+			<input class="mdl-textfield__input" name="submission[email]" type="email" id="email"  />
+			<label class="mdl-textfield__label" for="email">E-Mail</label>
+			<span class="mdl-textfield__error">Please enter valid email</span>
+		</div> <br>
+
+		<p class="jumbo-font-2">Track Information</p>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="">
+			<input class="mdl-textfield__input" name="submission[trackname]" type="text" id="trackname"  />
+			<label class="mdl-textfield__label" for="trackname">Track Name</label>
+		</div><br> 
+
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+			<input class="mdl-textfield__input" name="submission[bpm]" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="bpm"  />
+			<label class="mdl-textfield__label" for="bpm">Beats per Minute</label>
+			<span class="mdl-textfield__error">Input is not a number</span>
+		</div> <br>
+
+		<select name="submission[key]" class="styled-select"  >
+			<!-- <option value="">Musical Key</option> needs work -->
+			<option value="major">Major</option>
+			<option value="minor">Minor</option>
+		</select> <br>
+
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="">
+			<input class="mdl-textfield__input" name="submission[link]" type="text" id="link"  />
+			<label class="mdl-textfield__label" for="link">SoundCloud Streaming Link</label>
+			
+		</div>
+		<br>
+
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<textarea class="mdl-textfield__input" name="submission[comments]" type="text" rows= "5" id="sample6"></textarea>
+			<label class="mdl-textfield__label" for="sample6">Comments</label>
+		</div> <br>
+
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+		  <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" required/>
+		  <span class="mdl-checkbox__label"><p stle="color:rgb(3,169,244)">I hereby confirm that the track submited is my own work</p></span>
+		</label> <br><br>
+
+		<button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+		  Submit
+		</button>
+
+	</form>
+</div>

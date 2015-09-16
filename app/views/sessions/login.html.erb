@@ -1,0 +1,20 @@
+<form accept-charset="UTF-8" action="/login_attempt" method="post">
+
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">	
+
+	<h2>Log in</h2>
+
+	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo" style="">
+		<input class="mdl-textfield__input" name="username_or_email" type="text" id="username" />
+	<label class="mdl-textfield__label" for="username">Username or Email</label>
+	</div> <br>
+
+	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="">
+		<input class="mdl-textfield__input" name="login_password" type="password" id="password"  />
+	<label class="mdl-textfield__label" for="password">Password</label>
+	</div> <br>
+
+	<button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+	Sign in
+	</button>
+</form>

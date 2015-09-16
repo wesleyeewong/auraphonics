@@ -1,0 +1,125 @@
+<div style="height:auto">
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+	<div class="mdl-tabs__tab-bar">
+		<a href="#main" class="mdl-tabs__tab is-active">Main</a>
+		<a href="#pending" class="mdl-tabs__tab">Pending</a>
+		<a href="#approved" class="mdl-tabs__tab">Approved</a>
+		<a href="#completed" class="mdl-tabs__tab">Completed</a>
+		<a href="#denied" class="mdl-tabs__tab">Denied</a>
+	</div>
+
+
+	<div class="" style="padding:2%;margin-left:10%;margin-top:2.5%;overflow:hidden;width:80%;">
+
+		<div class="mdl-tabs__panel is-active" id="main">
+			<h1>Hello</h1>
+		</div>
+
+		<div class="mdl-tabs__panel" id="pending">
+			<h2>Pending</h2>
+			<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+				<thead>
+					<tr>
+						<th class="mdl-data-table__cell--non-numeric">Artist Name</th>
+						<th class="mdl-data-table__cell--non-numeric">Name</th>
+						<th class="mdl-data-table__cell--non-numeric">E-mail</th>
+						<th class="mdl-data-table__cell--non-numeric">Track Name</th>
+						<th class="mdl-data-table__cell--non-numeric">Details</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @submission.each do | submission | %>
+					<tr>
+						<td class="mdl-data-table__cell--non-numeric"><%= submission.artistname %></td>
+						<td class="mdl-data-table__cell--non-numeric"><%= submission.firstname %> <%= submission.lastname %></td>
+						<td class="mdl-data-table__cell--non-numeric"><%= submission.email %></td>
+						<td class="mdl-data-table__cell--non-numeric"><%= submission.trackname %></td>
+						<td class="mdl-data-table__cell--non-numeric"><%= link_to "Click for track details", "/pending_details/"+submission.id.to_s %></td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="mdl-tabs__panel" id="approved">
+			<h2>Approved</h2>
+			<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+				<thead>
+					<tr>
+						<th class="mdl-data-table__cell--non-numeric">Artist Name</th>
+						<th class="mdl-data-table__cell--non-numeric">Name</th>
+						<th class="mdl-data-table__cell--non-numeric">E-mail</th>
+						<th class="mdl-data-table__cell--non-numeric">Track Name</th>
+						<th class="mdl-data-table__cell--non-numeric">Details</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @approve.each do | approve | %>
+					<tr>
+						<td class="mdl-data-table__cell--non-numeric"><%= approve.artistname %></td>
+						<td class="mdl-data-table__cell--non-numeric"><%= approve.firstname %> <%= approve.lastname %></td>
+						<td class="mdl-data-table__cell--non-numeric"><%= approve.email %></td>
+						<td class="mdl-data-table__cell--non-numeric"><%= approve.trackname %></td>
+						<td class="mdl-data-table__cell--non-numeric"><%= link_to "Click for track details", "/approved_details/"+approve.id.to_s %></td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="mdl-tabs__panel" id="completed">
+			<h2>Completed</h2>
+			<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+				<thead>
+					<tr>
+						<th class="mdl-data-table__cell--non-numeric">Artist Name</th>
+						<th class="mdl-data-table__cell--non-numeric">Name</th>
+						<th class="mdl-data-table__cell--non-numeric">E-mail</th>
+						<th class="mdl-data-table__cell--non-numeric">Track Name</th>
+						<th class="mdl-data-table__cell--non-numeric">Details</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @completed.each do | completed | %>
+					<tr>
+						<td class="mdl-data-table__cell--non-numeric"><%= completed.artistname %></td>
+						<td class="mdl-data-table__cell--non-numeric"><%= completed.firstname %> <%= completed.lastname %></td>
+						<td class="mdl-data-table__cell--non-numeric"><%= completed.email %></td>
+						<td class="mdl-data-table__cell--non-numeric"><%= completed.trackname %></td>
+						<td class="mdl-data-table__cell--non-numeric"><%= link_to "Click for track details", "/completed_details/"+completed.id.to_s %></td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="mdl-tabs__panel" id="denied">
+		<h2>Denied</h2>
+			<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+				<thead>
+					<tr>
+						<th class="mdl-data-table__cell--non-numeric">Artist Name</th>
+						<th class="mdl-data-table__cell--non-numeric">Name</th>
+						<th class="mdl-data-table__cell--non-numeric">E-mail</th>
+						<th class="mdl-data-table__cell--non-numeric">Track Name</th>
+						<th class="mdl-data-table__cell--non-numeric">Details</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @deny.each do | deny | %>
+					<tr>
+						<td class="mdl-data-table__cell--non-numeric"><%= deny.artistname %></td>
+						<td class="mdl-data-table__cell--non-numeric"><%= deny.firstname %> <%= deny.lastname %></td>
+						<td class="mdl-data-table__cell--non-numeric"><%= deny.email %></td>
+						<td class="mdl-data-table__cell--non-numeric"><%= deny.trackname %></td>
+						<td class="mdl-data-table__cell--non-numeric"><%= link_to "Click for track details", "/denied_details/"+deny.id.to_s %></td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+
+
+	</div>
+</div>
+</div>

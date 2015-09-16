@@ -43,14 +43,24 @@
   </header>
   <div class="mdl-layout__drawer">
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Submit</a>
+      <a class="mdl-navigation__link" href="/submit">Submit</a>
       <a class="mdl-navigation__link" href="/contact">Contact</a>
-      <a class="mdl-navigation__link" href="">Donate</a>
+      <a class="mdl-navigation__link" href="/donate">Donate</a>
+      <a class="mdl-navigation__link" href="#">Admin Dashboard</a>
     </nav>
   </div>
-  <main class="mdl-layout__content" style="height:100%">
+  <main class="mdl-layout__content" style="height:auto">
     <div class="page-content w2-tab-center" style="height:100%"><%= yield %></div>
   </main>
+
+  <footer class="mdl-mini-footer">
+    <div class="mdl-mini-footer__left-section">
+      <div class="mdl-logo">Auraphonics</div>
+      <ul class="mdl-mini-footer__link-list">
+        <li>Copy rights</li>
+      </ul>
+    </div>
+  </footer>
 </div>
 
 </body>

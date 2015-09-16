@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  firstname: MyString
+  lastname: MyString
+  email: MyString
+  artistname: MyString
+  trackname: MyString
+  bpm: 1
+  key: MyString
+  link: MyString
+  comments: MyText
+
+two:
+  firstname: MyString
+  lastname: MyString
+  email: MyString
+  artistname: MyString
+  trackname: MyString
+  bpm: 1
+  key: MyString
+  link: MyString
+  comments: MyText

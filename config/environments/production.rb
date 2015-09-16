@@ -82,7 +82,7 @@ Rails.application.configure do
     port:                 587,
     domain:               'gmail.com',
     user_name:            'auraphonics@gmail.com',
-    password:             'Music712015',
+    password:             '',
     authentication:       'plain',
     enable_starttls_auto: true  }
 end

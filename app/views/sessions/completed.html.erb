@@ -1,0 +1,95 @@
+<div class="mdl-shadow--4dp mdl-card" style="padding:2%;margin-left:10%;margin-top:2.5%;overflow:hidden;width:80%;">
+
+	<form accept-charset="UTF-8" action="/update" method="post">
+
+		<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+		<input name="id" value="<%= @completed.id %>" type="hidden">
+		<input name="from" value="completed" type="hidden">
+
+		<p class="jumbo-font-2">Basic Information</p>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="">
+			<input class="mdl-textfield__input" name="artistname" type="text" id="nickname" value="<%= @completed.artistname %>"/>
+			<label class="mdl-textfield__label" for="nickname">Artist Name</label>
+		</div> <br>
+
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo" style="">
+			<input class="mdl-textfield__input" name="firstname" type="text" id="firstname" value="<%= @completed.firstname %>"/>
+			<label class="mdl-textfield__label" for="firstname">First Name</label>
+		</div>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="">
+			<input class="mdl-textfield__input" name="lastname" type="text" id="lastname"  value="<%= @completed.lastname %>"/>
+			<label class="mdl-textfield__label" for="lastname">Last Name</label>
+		</div> <br>
+
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="">
+			<input class="mdl-textfield__input" name="email" type="email" id="email"  value="<%= @completed.email %>"/>
+			<label class="mdl-textfield__label" for="email">E-Mail</label>
+			<span class="mdl-textfield__error">Please enter valid email</span>
+		</div> <br>
+
+		<p class="jumbo-font-2">Track Information</p>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="">
+			<input class="mdl-textfield__input" name="trackname" type="text" id="trackname"  value="<%= @completed.trackname %>"/>
+			<label class="mdl-textfield__label" for="trackname">Track Name</label>
+		</div><br> 
+
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+			<input class="mdl-textfield__input" name="bpm" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="bpm"  value="<%= @completed.bpm %>"/>
+			<label class="mdl-textfield__label" for="bpm">Beats per Minute</label>
+			<span class="mdl-textfield__error">Input is not a number</span>
+		</div> <br>
+
+		<select name="key" class="styled-select"  value="<%= @completed.key %>">
+			<!-- <option value="">Musical Key</option> needs work -->
+			<option value="major">Major</option>
+			<option value="minor">Minor</option>
+		</select> <br>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="">
+			<input class="mdl-textfield__input" name="link" type="text" id="link" value="<%= @completed.link %>" />
+			<label class="mdl-textfield__label" for="link">SoundCloud Streaming Link</label>
+		</div><br>
+
+		<p>Comments 	: <% if @completed.comments.nil? %>No comments<% else %><%= @completed.comments %><% end %></p> <hr>
+
+		<div>
+			<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="house">
+				<input type="checkbox" id="house" class="mdl-checkbox__input" name="house" value="true"/>
+				<span class="mdl-checkbox__label">House</span>
+			</label>
+			<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="bass">
+				<input type="checkbox" id="bass" class="mdl-checkbox__input" name="bass" value="true"/>
+				<span class="mdl-checkbox__label">Bass</span>
+			</label>
+			<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="trance">
+				<input type="checkbox" id="trance" class="mdl-checkbox__input" name="trance" value="true"/>
+				<span class="mdl-checkbox__label">Trance</span>
+			</label>
+			<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="electronic">
+				<input type="checkbox" id="electronic" class="mdl-checkbox__input" name="electronic" value="true"/>
+				<span class="mdl-checkbox__label">Electronic</span>
+			</label>
+		</div><hr>
+
+		<div style="padding-left:2%;float:left">
+		<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="update">
+			<input type="radio" id="update" class="mdl-radio__button" name="submit_type" value="update" checked />
+			<span class="mdl-radio__label">Update</span>
+		</label>
+		</div>
+
+		<div style="padding-left:2%;float:left">
+		<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="deny">
+			<input type="radio" id="deny" class="mdl-radio__button" name="submit_type" value="deny"  />
+			<span class="mdl-radio__label">Deny</span>
+		</label>
+		</div> <br><br>
+
+		<button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+		Submit
+		</button>
+
+	</form>
+
+
+
+</div>

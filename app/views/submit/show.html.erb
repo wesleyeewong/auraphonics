@@ -1,2 +1,14 @@
-<h1>Submit#show</h1>
-<p>Find me in app/views/submit/show.html.erb</p>
+<% provide(:title, "Submit success") %>
+
+	<div class="mdl-shadow--4dp mdl-card" style="padding-left:2%;margin-left:12.5%;margin-top:10%;overflow:hidden;width:75%;">
+
+		<h3>Dear <%= @submission.artistname %>,</h3>
+		<br>
+		<h3>Thank you for your submission! Over the next three days we will carefully review "<%= @submission.trackname %>". Please stay posted!</h3>
+		<br>
+		<h3>Best regards,</h3>
+		<br>
+		<h3>Auraphonics Network</h3>
+
+	</div>
+

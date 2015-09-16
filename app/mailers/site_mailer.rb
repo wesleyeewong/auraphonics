@@ -1,5 +1,5 @@
 class SiteMailer < ApplicationMailer
-	default from: "wesleywong1993@gmail.com"
+	default from: "auraphonics@gmail.com"
 
 	def sent(name, email, subject, body)
 
@@ -8,7 +8,7 @@ class SiteMailer < ApplicationMailer
 		@subject = subject
 		@body = body
 
-		mail(to: "wesleywong1993@gmail.com", subject: @subject)
+		mail(to: "auraphonics@gmail.com", subject: @subject)
 
 	end
 

@@ -1,0 +1,83 @@
+<div class="mdl-shadow--4dp mdl-card" style="padding:2%;margin-left:10%;margin-top:2.5%;overflow:hidden;width:80%;">
+
+	<form accept-charset="UTF-8" action="/update" method="post">
+
+		<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+		<input name="id" value="<%= @submission.id %>" type="hidden">
+		<input name="from" value="pending" type="hidden">
+
+		<p class="jumbo-font-2">Basic Information</p>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="">
+			<input class="mdl-textfield__input" name="artistname" type="text" id="nickname" value="<%= @submission.artistname %>"/>
+			<label class="mdl-textfield__label" for="nickname">Artist Name</label>
+		</div> <br>
+
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo" style="">
+			<input class="mdl-textfield__input" name="firstname" type="text" id="firstname" value="<%= @submission.firstname %>"/>
+			<label class="mdl-textfield__label" for="firstname">First Name</label>
+		</div>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="">
+			<input class="mdl-textfield__input" name="lastname" type="text" id="lastname"  value="<%= @submission.lastname %>"/>
+			<label class="mdl-textfield__label" for="lastname">Last Name</label>
+		</div> <br>
+
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="">
+			<input class="mdl-textfield__input" name="email" type="email" id="email"  value="<%= @submission.email %>"/>
+			<label class="mdl-textfield__label" for="email">E-Mail</label>
+			<span class="mdl-textfield__error">Please enter valid email</span>
+		</div> <br>
+
+		<p class="jumbo-font-2">Track Information</p>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="">
+			<input class="mdl-textfield__input" name="trackname" type="text" id="trackname"  value="<%= @submission.trackname %>"/>
+			<label class="mdl-textfield__label" for="trackname">Track Name</label>
+		</div><br> 
+
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+			<input class="mdl-textfield__input" name="bpm" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="bpm"  value="<%= @submission.bpm %>"/>
+			<label class="mdl-textfield__label" for="bpm">Beats per Minute</label>
+			<span class="mdl-textfield__error">Input is not a number</span>
+		</div> <br>
+
+		<select name="key" class="styled-select"  value="<%= @submission.key %>">
+			<!-- <option value="">Musical Key</option> needs work -->
+			<option value="major">Major</option>
+			<option value="minor">Minor</option>
+		</select> <br>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="">
+			<input class="mdl-textfield__input" name="link" type="text" id="link" value="<%= @submission.link %>" />
+			<label class="mdl-textfield__label" for="link">SoundCloud Streaming Link</label>
+		</div>
+		<br>
+		<p>Comments 	: <% if @submission.comments.nil? %>No comments<% else %><%= @submission.comments %><% end %></p> <hr>
+
+		<div style="padding-left:2%;float:left">
+		<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="update">
+			<input type="radio" id="update" class="mdl-radio__button" name="submit_type" value="update" checked />
+			<span class="mdl-radio__label">Update</span>
+		</label>
+		</div>
+
+		<div style="padding-left:2%;float:left">
+		<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="approve">
+			<input type="radio" id="approve" class="mdl-radio__button" name="submit_type" value="approve"  />
+			<span class="mdl-radio__label">Approve</span>
+		</label>
+		</div>
+
+		<div style="padding-left:2%;float:left">
+		<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="deny">
+			<input type="radio" id="deny" class="mdl-radio__button" name="submit_type" value="deny"  />
+			<span class="mdl-radio__label">Deny</span>
+		</label>
+		</div> <br><br>
+
+		<button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+		Submit
+		</button>
+
+	</form>
+
+
+
+</div>
